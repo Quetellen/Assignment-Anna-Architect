@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Anna-Architectural-firm';
+  authenticated: boolean = false;
+
+  onAuthenticated(authenticated: boolean): void {
+    this.authenticated = authenticated;
+  }
 }
