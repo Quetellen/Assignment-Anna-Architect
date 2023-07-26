@@ -23,4 +23,6 @@ export class LoginComponent {
     this.userAuthenticated.emit(true);
   }
 
+  
+
 }

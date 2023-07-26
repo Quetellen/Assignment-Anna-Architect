@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ClientMeetingComponent {
 
+  
+  onSubmit(data: any){
+    console.log(data)
+  };
 }

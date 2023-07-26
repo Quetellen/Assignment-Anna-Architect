@@ -6,9 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./client-creation.component.css']
 })
 export class ClientCreationComponent {
+  
+ 
 
-  submit(login: any){
-    console.log('Form Submited', login)
+  onSubmit(data: any){
+    console.log(data)
   };
 
 }

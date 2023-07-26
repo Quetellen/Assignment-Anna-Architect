@@ -2,61 +2,35 @@
     <h1>Archi+tech Innovations</h1> <br>
     <h2>Create a client</h2>
     <h5>Please fill in this form to create a client.</h5>
-    <form #login="ngForm" (ngSubmit="Submit(login)")>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
         <div class="mb-3 col-sm-5">
-            <label for="Name" class="form-label"><strong>Name</strong></label>
-            <input #name="ngModel" minlength="2" required type="name" class="form-control" id="name" placeholder="Full Name" ngModel>
-            <div *ngIf="name.touched && name.invalid" class="alert alert-danger">
-                <div *ngIf="name.errors?.['required']">
-                    Name is required
-                </div>
-                <div *ngIf="name.errors?.['minlength']">
-                    Name is invalid
-                </div>
-            </div>
+            <label for="name" class="form-label"><strong>Name</strong></label>
+            <input pattern="[a-zA-Z ]*" ngModel type="name" required #name="ngModel" class="form-control" name="name" placeholder="Full name" >
+            <span *ngIf="name.invalid && name.touched" class="error">Name is required</span>
         </div>
+        <!-- EMAIL -->
         <div class="mb-3 col-sm-5">
             <label for="email" class="form-label"><strong>Email</strong></label>
-            <input #email="ngModel" minlength="5" required type="email" class="form-control" id="email" placeholder="name@example.com" ngModel>
-            <div *ngIf="email.touched && email.invalid" class="alert alert-danger">
-                <div *ngIf="email.errors?.['required']">
-                    Email is required
-                </div>
-                <div *ngIf="email.errors?.['minlength']">
-                    Email is invalid
-                </div>
-            </div>
+            <input ngModel type="email" email required #email="ngModel" class="form-control" name="email" placeholder="name@example.com" >
+        <span *ngIf="email.invalid && email.touched" class="error">Email is not valid</span>
         </div>
         <div class="mb-3 col-sm-5">
             <label for="Address" class="form-label"><strong>Address</strong></label>
             <textarea class="form-control" id="address" rows="3"></textarea>
         </div>
+        <!-- PASSWORD  -->
             <div class="mb-3 col-sm-5">
                 <label for="password" class="form-label"><strong>Password</strong></label>
-                <input #password="ngModel" minlength="8" required type="password" id="password" class="form-control" aria-labelledby="passwordHelpBlock" ngModel>
-            <div *ngIf="password.touched && password.invalid" class="alert alert-danger">
-                <div *ngIf="password.errors?.['required']">
-                    Password is required
-                </div>
-                <div *ngIf="password.errors?.['minlength']">
-                    Password must have min of 8 characters
-                </div>
-            </div>
+                <input ngModel type="password" required #password="ngModel" minlength="6" class="form-control" name="password" aria-labelledby="passwordHelpBlock" >
+                <span *ngIf="password.invalid && password.touched" class="error">Password not valid</span>
         </div>
         <div class="mb-3 col-sm-5">
             <label for="password2" class="form-label"><strong>Password2</strong></label>
-            <input #password2="ngModel" minlength="8" required type="password2" id="password2" class="form-control" aria-labelledby="passwordHelpBlock" ngModel>
-        <div *ngIf="password2.touched && password2.invalid" class="alert alert-danger">
-            <div *ngIf="password2.errors?.['required']">
-                Password is required
-            </div>
-            <div *ngIf="password2.errors?.['minlength']" && password2!.password="===">
-                Password must have min of 8 characters
-            </div>
+            <input ngModel type="password2" required #password2="ngModel" minlength="6" class="form-control" name="password2" aria-labelledby="passwordHelpBlock" >
+            <span *ngIf="password2.invalid && password2.touched" class="error">Password not valid</span>
         </div>
-    </div>
-    <div class="col-auto">
-        <button type="submit" class="btn btn-primary mb-3">Register</button>
-    </div>
-</form>
+        <div class="col-auto">
+            <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary mb-3">Register</button>
+        </div>
+    </form>
 </div>
