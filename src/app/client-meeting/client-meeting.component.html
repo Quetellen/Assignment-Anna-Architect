@@ -10,14 +10,17 @@
     </div>
     <div class="mb-3 col-sm-3">
         <label for="npeople" class="form-label"><strong>Number of People</strong></label>
-        <input type="npeople" class="form-control" id="npeople" placeholder="Enter mumber of people">
+        <input  pattern="[0-9 ]*" type="npeople" ngModel required #npeople="ngModel" class="form-control" name="npeople" placeholder="Enter number of people">
+        <span *ngIf="npeople.invalid && npeople.touched" class="error">Number of people is required</span>
     </div>
+    <!-- DATE  -->
     <div class="mb-3 col-sm-4">
-        <label for="npeople" class="form-label"><strong>Start Time</strong></label>
-        <input type="datetime-local" class="form-control" id="meetingTime" name="meeting-time">
+        <label for="date" class="form-label"><strong>Start Time</strong></label>
+        <input type="datetime-local" ngModel required #date="ngModel" class="form-control" name="date">
+        <span *ngIf="date.invalid && date.touched" class="error">Date and time is required</span>
     </div>
     <div class="col-auto">
-        <button type="submit" class="btn btn-secondary">Register</button>
+        <button [disabled]="userForm.invalid" type="submit" class="btn btn-secondary">Register</button>
     </div>
     </form>
 </div>
