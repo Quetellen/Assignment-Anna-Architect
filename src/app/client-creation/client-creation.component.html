@@ -1,36 +1,56 @@
-<div class="col-sm title center-v">
-    <h1>Archi+tech Innovations</h1> <br>
-    <h2>Create a client</h2>
-    <h5>Please fill in this form to create a client.</h5>
-    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
-        <div class="mb-3 col-sm-5">
-            <label for="name" class="form-label"><strong>Name</strong></label>
-            <input pattern="[a-zA-Z ]*" ngModel type="name" required #name="ngModel" class="form-control" name="name" placeholder="Full name" >
-            <span *ngIf="name.invalid && name.touched" class="error">Name is required</span>
+<div class="row">
+    <div class="col-sm title center-v">
+        <div class="pl-4">
+            <div>
+                <h1>Archi+tech Innovations</h1>
+                <h3> Welcome to Anna's Architectural Firm </h3>
+              </div>
+              <br><br>
+              <div>
+                <h6>We are an uprising architectural firm based in Oakland that brings the best 
+                    that the market has to offer in quality and scientific research.</h6>
+              </div>
         </div>
-        <!-- EMAIL -->
-        <div class="mb-3 col-sm-5">
-            <label for="email" class="form-label"><strong>Email</strong></label>
-            <input ngModel type="email" email required #email="ngModel" class="form-control" name="email" placeholder="name@example.com" >
-        <span *ngIf="email.invalid && email.touched" class="error">Email is not valid</span>
-        </div>
-        <div class="mb-3 col-sm-5">
-            <label for="Address" class="form-label"><strong>Address</strong></label>
-            <textarea class="form-control" id="address" rows="3"></textarea>
-        </div>
-        <!-- PASSWORD  -->
-            <div class="mb-3 col-sm-5">
-                <label for="password" class="form-label"><strong>Password</strong></label>
-                <input ngModel type="password" required #password="ngModel" minlength="6" class="form-control" name="password" aria-labelledby="passwordHelpBlock" >
-                <span *ngIf="password.invalid && password.touched" class="error">Password not valid</span>
-        </div>
-        <div class="mb-3 col-sm-5">
-            <label for="password2" class="form-label"><strong>Password2</strong></label>
-            <input ngModel type="password2" required #password2="ngModel" minlength="6" class="form-control" name="password2" aria-labelledby="passwordHelpBlock" >
-            <span *ngIf="password2.invalid && password2.touched" class="error">Password not valid</span>
-        </div>
-        <div class="col-auto">
-            <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary mb-3">Register</button>
-        </div>
-    </form>
+    </div>
+    <div class="col-sm center">
+        <div class="border border-secondary px-5 py-4 w-90">
+            <div>
+                <h2>Create a client</h2>
+                <h5>Please fill in this form to create a client.</h5>
+            <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+                <div class="mb-3 col-sm-8">
+                    <label for="name" class="form-label"><strong>Name</strong></label>
+                    <input pattern="[a-zA-Z ]*" ngModel type="name" required #name="ngModel" class="form-control" name="name" placeholder="Full name" >
+                    <span *ngIf="name.invalid && name.touched" class="error">Name is required</span>
+                </div>
+                <!-- EMAIL -->
+                <div class="mb-3 col-sm-8">
+                    <label for="email" class="form-label"><strong>Email</strong></label>
+                    <input ngModel type="email" email required #email="ngModel" class="form-control" name="email" placeholder="name@example.com" >
+                    <span *ngIf="email.invalid && email.touched" class="error">Email is not valid</span>
+                </div>
+                <div class="mb-3 col-sm-8">
+                    <label for="Address" class="form-label"><strong>Address</strong></label>
+                    <textarea class="form-control" id="address" rows="3"></textarea>
+                </div>
+                <!-- PASSWORD  -->
+                <div class="mb-3 col-sm-8">
+                    <label for="password" class="form-label"><strong>Password</strong></label>
+                    <input ngModel type="password" required #password="ngModel" minlength="6" class="form-control" name="password" aria-labelledby="passwordHelpBlock" >
+                    <span *ngIf="password.invalid && password.touched" class="error">Password not valid</span>
+                </div>
+                <div class="mb-3 col-sm-8">
+                    <label for="password2" class="form-label"><strong>Password2</strong></label>
+                    <input ngModel type="password2" required #password2="ngModel" minlength="6" class="form-control" name="password2" aria-labelledby="passwordHelpBlock" >
+                    <span *ngIf="password2.invalid && password2.touched" class="error">Password not valid</span>
+                </div>
+                <div class="col-auto">
+                <button [disabled]="userForm.invalid" type="submit" class="btn btn-secondary">Register</button>
+                </div>
+            </form>
+            </div>
+        </div>   
+    </div> 
 </div>
+
+<router-outlet></router-outlet>

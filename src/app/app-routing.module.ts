@@ -7,13 +7,13 @@ import { MaterialPricesComponent } from './material-prices/material-prices.compo
 
 const routes: Routes = [
   {path:'client-meeting', component: ClientMeetingComponent},
-  {path:'client-creation', component: ClientCreationComponent},
   {path:'My-project', component: MyProjectComponent},
-  {path:'material-prices', component: MaterialPricesComponent}
+  {path:'material-prices', component: MaterialPricesComponent},
+  {path: 'client-creation', component: ClientCreationComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {enableTracing: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

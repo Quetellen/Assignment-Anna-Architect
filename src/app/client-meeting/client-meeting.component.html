@@ -1,26 +1,36 @@
-<div class="col-sm title center-v">
-    <h1>Archi+tech Innovations</h1> <br>
-    <h2>Create a meeting Schedule</h2>
-    <h5>Please fill in this form to create a client.</h5>
-    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
-    <div class="mb-3 col-sm-3">
-        <label for="meeting" class="form-label"><strong>Meeting Topic</strong></label>
-        <input type="meeting" ngModel required #meeting="ngModel" class="form-control" name="meeting" placeholder="Enter Meeting Topic">
-        <span *ngIf="meeting.invalid && meeting.touched" class="error">Meeting topic is required</span>
+<div class="row">
+    <div class="col-sm title center">
+        <div class="pl-4">
+            <img src="../../assets/img/meeting.jpg">            
+        </div>
     </div>
-    <div class="mb-3 col-sm-3">
-        <label for="npeople" class="form-label"><strong>Number of People</strong></label>
-        <input  pattern="[0-9 ]*" type="npeople" ngModel required #npeople="ngModel" class="form-control" name="npeople" placeholder="Enter number of people">
-        <span *ngIf="npeople.invalid && npeople.touched" class="error">Number of people is required</span>
+    <div class="col-sm title center-v">
+        <div class="border border-secondary px-5 py-4 w-100">
+            <h2>Create a Meeting Schedule</h2>
+            <h5>Please fill in this form to create a client meeting.</h5>
+            <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+                <div class="mb-3 col-sm-5">
+                    <label for="meeting" class="form-label"><strong>Meeting Topic</strong></label>
+                    <input type="meeting" ngModel required #meeting="ngModel" class="form-control" name="meeting" placeholder="Enter Meeting Topic">
+                    <span *ngIf="meeting.invalid && meeting.touched" class="error">Meeting topic is required</span>
+                </div>
+                <div class="mb-3 col-sm-5">
+                    <label for="npeople" class="form-label"><strong>Number of People</strong></label>
+                    <input  pattern="[0-9 ]*" type="npeople" ngModel required #npeople="ngModel" class="form-control" name="npeople" placeholder="Enter number of people">
+                    <span *ngIf="npeople.invalid && npeople.touched" class="error">Number of people is required</span>
+                </div>
+                <!-- DATE  -->
+                <div class="mb-3 col-sm-6">
+                    <label for="date" class="form-label"><strong>Start Time</strong></label>
+                    <input type="datetime-local" ngModel required #date="ngModel" class="form-control" name="date">
+                    <span *ngIf="date.invalid && date.touched" class="error">Date and time is required</span>
+                </div>
+                <div class="col-auto">
+                    <button [disabled]="userForm.invalid" type="submit" class="btn btn-secondary">Register</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <!-- DATE  -->
-    <div class="mb-3 col-sm-4">
-        <label for="date" class="form-label"><strong>Start Time</strong></label>
-        <input type="datetime-local" ngModel required #date="ngModel" class="form-control" name="date">
-        <span *ngIf="date.invalid && date.touched" class="error">Date and time is required</span>
-    </div>
-    <div class="col-auto">
-        <button [disabled]="userForm.invalid" type="submit" class="btn btn-secondary">Register</button>
-    </div>
-    </form>
+    
 </div>
+

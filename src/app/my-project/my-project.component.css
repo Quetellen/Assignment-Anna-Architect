@@ -1,0 +1,13 @@
+img{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 100%;
+    opacity: 0.9;
+}
+h1{
+    color: #00424f;
+}
+h3{
+    color:#2b6875
+}

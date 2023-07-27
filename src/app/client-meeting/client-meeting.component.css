@@ -1,4 +1,38 @@
 
+img{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 90%;
+    opacity: 0.9;
+} 
+h1{
+    color: #00424f;
+}
+h3{
+    color:#2b6875
+}
+
+.row {
+    height: 90vh;
+}
+.center-v {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    align-items:self-start;
+    justify-content: center;
+}
+
+.w-90 {
+    width: 90% !important;
+}
+
 input.ng-invalid{
     border-left: 5px solid red
 }
