@@ -11,6 +11,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MaterialPricesComponent } from './material-prices/material-prices.component';
 import { MyProjectComponent } from './my-project/my-project.component';
 import { UsersComponent } from './users/users.component';
+import { ClientComponent } from './client/client.component';
+import { ClientPortfolioComponent } from './client-portfolio/client-portfolio.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { UsersComponent } from './users/users.component';
     DashboardComponent,
     MaterialPricesComponent,
     MyProjectComponent,
-    UsersComponent   
+    UsersComponent,
+    ClientComponent,
+    ClientPortfolioComponent   
   ],
   imports: [
     BrowserModule,

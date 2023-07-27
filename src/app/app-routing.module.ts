@@ -3,15 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { ClientMeetingComponent } from './client-meeting/client-meeting.component';
 import { ClientCreationComponent } from './client-creation/client-creation.component';
 import { MyProjectComponent } from './my-project/my-project.component';
-import { MaterialPricesComponent } from './material-prices/material-prices.component';
-import { UsersComponent } from './users/users.component';
+import { ClientComponent } from './client/client.component';
+import { ClientPortfolioComponent } from './client-portfolio/client-portfolio.component';
 
 const routes: Routes = [
   {path:'client-meeting', component: ClientMeetingComponent},
   {path:'My-project', component: MyProjectComponent},
-  {path:'material-prices', component: MaterialPricesComponent},
+  {path:'client-portfolio', component: ClientPortfolioComponent},
   {path: 'client-creation', component: ClientCreationComponent},
-  {path: 'users', component: UsersComponent}
+  {path: 'client', component: ClientComponent}
 ];
 
 @NgModule({
