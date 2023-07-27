@@ -1,7 +1,13 @@
 .title {
-    background-color: rgb(237, 245, 245);
+    background: linear-gradient(120deg,#f3ece2,#f1e1c2 100%);
     color: rgb(0, 0, 0);
     font-size: 14px
+}
+h1{
+    color: rgba(118, 88, 46, 0.989);
+}
+h3{
+    color: rgb(169, 145, 83);
 }
 
 .row {
