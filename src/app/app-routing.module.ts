@@ -4,12 +4,14 @@ import { ClientMeetingComponent } from './client-meeting/client-meeting.componen
 import { ClientCreationComponent } from './client-creation/client-creation.component';
 import { MyProjectComponent } from './my-project/my-project.component';
 import { MaterialPricesComponent } from './material-prices/material-prices.component';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   {path:'client-meeting', component: ClientMeetingComponent},
   {path:'My-project', component: MyProjectComponent},
   {path:'material-prices', component: MaterialPricesComponent},
-  {path: 'client-creation', component: ClientCreationComponent}
+  {path: 'client-creation', component: ClientCreationComponent},
+  {path: 'users', component: UsersComponent}
 ];
 
 @NgModule({

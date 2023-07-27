@@ -4,11 +4,10 @@
     font-size: 14px
 }
 h1{
+    text-align: center;
     color: #00424f;
 }
-h3{
-    color:#2b6875
-}
+
 
 .row {
     height: 90vh;

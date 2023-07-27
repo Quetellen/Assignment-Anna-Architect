@@ -10,6 +10,7 @@ import { ClientMeetingComponent } from './client-meeting/client-meeting.componen
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MaterialPricesComponent } from './material-prices/material-prices.component';
 import { MyProjectComponent } from './my-project/my-project.component';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MyProjectComponent } from './my-project/my-project.component';
     ClientMeetingComponent,
     DashboardComponent,
     MaterialPricesComponent,
-    MyProjectComponent   
+    MyProjectComponent,
+    UsersComponent   
   ],
   imports: [
     BrowserModule,

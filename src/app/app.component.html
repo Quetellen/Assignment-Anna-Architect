@@ -1,6 +1,6 @@
 <div class="container mt-5">
   <app-login *ngIf="!authenticated" (userAuthenticated)="onAuthenticated($event)"></app-login>
   <app-dashboard *ngIf="authenticated" (userAuthenticated)="onAuthenticated($event)"></app-dashboard>
-  <router-outlet></router-outlet>
+  
 </div>
 
