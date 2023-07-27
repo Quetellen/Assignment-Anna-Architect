@@ -40,7 +40,6 @@
         <thead>
           <tr>
             <th scope="col">meeting id</th>
-            <th scope="col"></th>
             <th scope="col">meeting topict</th>
             <th scope="col">number of people</th>
             <th scope="col">date</th>
@@ -48,6 +47,17 @@
             <th scope="col">Project id</th>
           </tr>
         </thead>
+        <tbody>
+            <tr *ngFor="let user of clientmeeting; let i = index">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ user.topic }}</td>
+              <td>{{ user.npeople }}</td>
+              <td>{{ user.date }}</td>
+              <td>{{ user.time }}</td>
+              <td>{{ user.projectid }}</td>
+              <td><button type="button" class="btn btn-danger btn-sm">View meeting</button></td>
+            </tr>
+          </tbody>
       </table>
 </div>
 
