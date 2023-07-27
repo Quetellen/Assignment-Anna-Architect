@@ -8,9 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { ClientCreationComponent } from './client-creation/client-creation.component';
 import { ClientMeetingComponent } from './client-meeting/client-meeting.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MaterialPricesComponent } from './material-prices/material-prices.component';
 import { MyProjectComponent } from './my-project/my-project.component';
-import { UsersComponent } from './users/users.component';
 import { ClientComponent } from './client/client.component';
 import { ClientPortfolioComponent } from './client-portfolio/client-portfolio.component';
 
@@ -22,9 +20,7 @@ import { ClientPortfolioComponent } from './client-portfolio/client-portfolio.co
     ClientCreationComponent,
     ClientMeetingComponent,
     DashboardComponent,
-    MaterialPricesComponent,
     MyProjectComponent,
-    UsersComponent,
     ClientComponent,
     ClientPortfolioComponent   
   ],
