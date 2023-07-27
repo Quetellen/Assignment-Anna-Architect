@@ -3,16 +3,11 @@ img{
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
-    max-width: 90%;
+    max-width: 60%;
     opacity: 0.9;
 } 
-
-
-.row {
-    height: 90vh;
-}
 .center-v {
-    width: 100%;
+    width: 60%;
     display: flex;
     align-items: center;
 }
